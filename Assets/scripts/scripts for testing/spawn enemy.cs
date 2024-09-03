@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 
 public class spawnenemy : MonoBehaviour
@@ -18,12 +19,7 @@ public class spawnenemy : MonoBehaviour
     public float bossesLeftThisRound = 1;
     public float theRound = 1;
     public bool isThereAEnemyLeft = true;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
+    public CardSelectionManager cardSelectionManager;
     // Update is called once per frame
     void Update()
     {
@@ -79,11 +75,15 @@ public class spawnenemy : MonoBehaviour
         }
         if (bossesLeftThisRound == 0 && isThereAEnemyLeft == false)
         {
-            theRound++;
-            enemyPerRoundsMath = enemyPerRoundsMath * 1.5;
-            enemyPerRoundsMath = Math.Round(enemyPerRoundsMath, MidpointRounding.AwayFromZero);
-            enemyPerRounds = enemyPerRoundsMath;
-            bossesLeftThisRound++;
+            if(cardSelectionManager.isCardsDun == true)
+            {
+                theRound++;
+                enemyPerRoundsMath = enemyPerRoundsMath * 1.5;
+                enemyPerRoundsMath = Math.Round(enemyPerRoundsMath, MidpointRounding.AwayFromZero);
+                enemyPerRounds = enemyPerRoundsMath;
+                bossesLeftThisRound++;
+
+            }
         }
     }
 }

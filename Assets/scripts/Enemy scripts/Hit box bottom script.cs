@@ -16,7 +16,6 @@ public class Hitboxbottomscript : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy"))
         {
             // Run the code you want here
-            Debug.Log("Enemy hit!");
             playerScript.PlayerHP -= 1;
             Destroy(collision.gameObject);
         }

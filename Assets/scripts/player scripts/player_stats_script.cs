@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class playerstatsscipt : MonoBehaviour
 {
-    public int PlayerHP = 5;
+    public float PlayerHP = 5;
     // Start is called before the first frame update
     void Start()
     {
