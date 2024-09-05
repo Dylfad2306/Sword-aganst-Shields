@@ -86,7 +86,7 @@ public class CardSelectionManager : MonoBehaviour
         }
 
         Debug.Log("Card selection started");
-        Time.timeScale = 0; // Pause the game
+        Time.timeScale = 0; // Pause the game. fix a better way to paue
         cardCanvas.enabled = true; // Show the card selection UI
         onComplete = callback;
 
