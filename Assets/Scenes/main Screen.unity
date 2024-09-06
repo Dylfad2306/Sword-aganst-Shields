@@ -266,7 +266,7 @@ GameObject:
   - component: {fileID: 127230856}
   m_Layer: 0
   m_Name: Game magegment
-  m_TagString: Untagged
+  m_TagString: StateMachine
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -295,6 +295,7 @@ MonoBehaviour:
   theRound: 1
   isThereAEnemyLeft: 1
   cardSelectionManager: {fileID: 1404273719}
+  spawnDelay: 5
 --- !u!4 &127230854
 Transform:
   m_ObjectHideFlags: 0

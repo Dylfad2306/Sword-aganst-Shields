@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7226263588310668286}
   - component: {fileID: 8530970141707885488}
   - component: {fileID: -5558668234185031946}
+  - component: {fileID: 4337025339121593668}
   m_Layer: 0
   m_Name: Neatherite sword
   m_TagString: Enemy
@@ -183,5 +184,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ae36b98b7af4dff49ba329e5e2de7cd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyHP: 2
+--- !u!114 &4337025339121593668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2078881098170958406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7fd476c1469e9c4890cca962e3856a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
