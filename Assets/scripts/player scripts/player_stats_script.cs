@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class playerstatsscipt : MonoBehaviour
 {
     public float PlayerHP = 5;
+    public float gold = 5;
+    public float playerDamage = 1;
     // Start is called before the first frame update
     void Start()
     {

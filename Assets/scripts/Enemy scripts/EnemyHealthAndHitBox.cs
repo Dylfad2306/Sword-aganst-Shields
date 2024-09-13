@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
-    public int EnemyHP = 2;
+    public float EnemyHP = 2;
+
+
+    playerstatsscipt playerStats;
     // Start is called before the first frame update
     void Start()
     {
-        
+        playerStats = GameObject.FindGameObjectWithTag("Player").GetComponent<playerstatsscipt>();
     }
 
     // Update is called once per frame
@@ -16,7 +19,7 @@ public class EnemyHealth : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Bullet"))
         {
-            EnemyHP -= 1;
+            EnemyHP -= playerStats.playerDamage;
             Destroy(collision.gameObject);
             if (EnemyHP <= 0)
             {
