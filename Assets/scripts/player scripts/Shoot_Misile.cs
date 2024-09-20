@@ -30,6 +30,12 @@ public class Shoot_Misile : MonoBehaviour
         {
             cd = 0;
         }
-        
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            
+        }
     }
 }
