@@ -5,10 +5,17 @@ using UnityEngine;
 public class Shoot_Misile : MonoBehaviour
 {
     public GameObject RocketPrefab;
+    public GameObject ExplotionPrefab;
     private float RocketCooldown = 10;
     public Transform RocketMuzzle;
     private float RocketSpeed = 10f;
-    public float cd; 
+    public float cd;
+    GameObject Rocket;
+
+    private void OnDestroy()
+    {
+        GameObject Explotion = Instantiate(ExplotionPrefab, RocketMuzzle.position, Quaternion.identity);
+    }
 
     void Update()
     {
@@ -35,7 +42,8 @@ public class Shoot_Misile : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            
+            print("hello its a me marbio and you hit it");
+            Destroy(Rocket);
         }
     }
 }
